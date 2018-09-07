@@ -240,6 +240,25 @@ class LimesurveyApi
     /**
      * TODO
      *
+     * Import or update a participant int the LimeSurvey CPD. It stores attributes as well, if they are registered before within ui
+     *
+     * Call the function with $response = $myJSONRPCClient->cpd_updateOrCreateParticipants( $sessionKey, $aParticipants);
+     *
+     * This call is only available if the extendRemoteControl plugin is installed and activated.
+     *
+     * @param array $aParticipants
+     * [[0] => ["email"=>"dummy-02222@limesurvey.com","firstname"=>"max","lastname"=>"mustermann"]]
+     *
+     * @return array with status
+     */
+    public function cpd_updateOrCreateParticipants ( array $aParticipants = [] )
+    {
+        return $this->jsonRPCClient->cpd_updateOrCreateParticipants( $this->session_key, $aParticipants );
+    }
+
+    /**
+     * TODO
+     *
      * Delete a group from a chosen survey .
      * Returns the id of the deleted group.
      *
