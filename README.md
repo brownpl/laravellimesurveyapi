@@ -9,7 +9,7 @@ By default, API access via Remotecontrol2 is disabled, follow the instructions a
 This package can be installed using the following composer command from the root of your Laravel project.
 
 ```bash
-   $ composer require "neilherbertuk/laravellimesurveyapi: dev-master"
+   $ composer require "brownpl/laravellimesurveyapi: dev-master"
 ```
 
 In Laravel 5.5+ this package should be auto-discovered, however if you are using an earlier version or Laravel add the following service provider and facade in the `config/app.php` file:
@@ -17,14 +17,14 @@ In Laravel 5.5+ this package should be auto-discovered, however if you are using
 ```php
     'providers' => [
         // ...
-        neilherbertuk\laravellimesurveyapi\LaravelLimesurveyApiProvider::class,
+        brownpl\laravellimesurveyapi\LaravelLimesurveyApiProvider::class,
     ];
 ```
 
 ```php
     'aliases' => [
         // ...
-        'LimeSurveyAPI' => neilherbertuk\laravellimesurveyapi\Facades\LimeSurveyAPI::class,
+        'LimeSurveyAPI' => brownpl\laravellimesurveyapi\Facades\LimeSurveyAPI::class,
     ];
 ```
 
@@ -33,7 +33,7 @@ In Laravel 5.5+ this package should be auto-discovered, however if you are using
 By default, the configuration is set within the .env file, however, if you wish to override this, please publish the config file.
 
 ```
-   $ php artisan vendor:publish --provider="neilherbertuk\laravellimesurveyapi\LaravelLimesurveyApiProvider"
+   $ php artisan vendor:publish --provider="brownpl\laravellimesurveyapi\LaravelLimesurveyApiProvider"
 ```
 
 ### Configure
@@ -51,7 +51,7 @@ LIMESURVEY_PASSWORD=
 TODO
 
 ## Credit
-Based on [du-lei/limesurvey-api-handle](https://github.com/du-lei/limesurvey-api-handle)
+Based on [du-lei/limesurvey-api-handle](https://github.com/du-lei/limesurvey-api-handle) and forked from [neilherbertuk/laravellimesurveyapi](https://github.com/neilherbertuk/laravellimesurveyapi).
 
 ## License
 [MIT](LICENSE)

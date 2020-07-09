@@ -1,5 +1,5 @@
 {
-  "name": "neilherbertuk/laravellimesurveyapi",
+  "name": "brownpl/laravellimesurveyapi",
   "description": "Laravel wrapper for the LimeSurvey RemoteControl2 API",
   "keyword": [
     "limesurvey",
@@ -10,6 +10,10 @@
   ],
   "license": "MIT",
   "authors": [
+    {
+      "name": "brownpl",
+      "email": "brownpl@gmail.com"
+    },
     {
       "name": "neilherbertuk",
       "email": "neil@ea3.co.uk"
@@ -22,7 +26,7 @@
   "autoload": {
     "psr-4": {
       "App\\": "app/",
-      "neilherbertuk\\laravellimesurveyapi\\": "src/"
+      "brownpl\\laravellimesurveyapi\\": "src/"
     }
   },
   "minimum-stability": "stable",
@@ -36,10 +40,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "neilherbertuk\\laravellimesurveyapi\\LaravelLimesurveyApiProvider"
+        "brownpl\\laravellimesurveyapi\\LaravelLimesurveyApiProvider"
       ],
       "aliases": {
-      	"LimeSurveyAPI": "neilherbertuk\\laravellimesurveyapi\\Facades\\LimeSurveyAPI"
+      	"LimeSurveyAPI": "brownpl\\laravellimesurveyapi\\Facades\\LimeSurveyAPI"
       }
     }
   }

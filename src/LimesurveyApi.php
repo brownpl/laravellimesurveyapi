@@ -1,6 +1,6 @@
 <?php
 
-namespace neilherbertuk\laravellimesurveyapi;
+namespace brownpl\laravellimesurveyapi;
 
 use org\jsonrpcphp\JsonRPCClient;
 
@@ -353,19 +353,16 @@ class LimesurveyApi
      *
      * @param int     $iSurveyID         ID of the Survey
      * @param string  $sDocumentType     any format available by plugins (for example : pdf, csv, xls, doc, json)
-     * @param string  $sLanguageCode     (optional) The language to be used
+     * @param string  $sLanguageCode     (optional) The language to be used (en default)
      * @param string  $sCompletionStatus (optional) 'complete','incomplete' or 'all' - defaults to 'all'
      * @param string  $sHeadingType      (optional) 'code','full' or 'abbreviated' Optional defaults to 'code'
      * @param string  $sResponseType     (optional)'short' or 'long' Optional defaults to 'short'
-     * @param integer $iFromResponseID   (optional)
-     * @param integer $iToResponseID     (optional)
-     * @param array   $aFields           (optional) Selected fields
      *
      * @return array|string On success: Requested file as base 64-encoded string. On failure array with error information
      */
-    public function export_responses ( $iSurveyID, $sDocumentType, $sLanguageCode, $sCompletionStatus, $sHeadingType, $sResponseType, $iFromResponseID, $iToResponseID, array $aFields = [] )
+    public function export_responses ( $iSurveyID, $sDocumentType, $sLanguageCode='en', $sCompletionStatus='all', $sHeadingType='code', $sResponseType='short' )
     {
-        return $this->jsonRPCClient->export_responses( $this->session_key, $iSurveyID, $sDocumentType, $sLanguageCode, $sCompletionStatus, $sHeadingType, $sResponseType, $iFromResponseID, $iToResponseID, $aFields );
+        return $this->jsonRPCClient->export_responses( $this->session_key, $iSurveyID, $sDocumentType, $sLanguageCode, $sCompletionStatus, $sHeadingType, $sResponseType );
     }
 
     /**

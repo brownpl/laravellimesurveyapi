@@ -1,6 +1,6 @@
 <?php
 
-namespace neilherbertuk\laravellimesurveyapi;
+namespace brownpl\laravellimesurveyapi;
 
 use Illuminate\Support\ServiceProvider;
 

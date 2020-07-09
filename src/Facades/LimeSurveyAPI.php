@@ -1,6 +1,6 @@
 <?php
 
-namespace neilherbertuk\laravellimesurveyapi\Facades;
+namespace brownpl\laravellimesurveyapi\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -13,6 +13,6 @@ class LimeSurveyAPI extends Facade
      */
     protected static function getFacadeAccessor()
     { 
-    	return \neilherbertuk\laravellimesurveyapi\LimesurveyApi::class;
+    	return \brownpl\laravellimesurveyapi\LimesurveyApi::class;
     }
 }
