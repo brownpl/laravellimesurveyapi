@@ -380,13 +380,12 @@ class LimesurveyApi
      * @param string $sCompletionStatus Optional 'complete','incomplete' or 'all' - defaults to 'all'
      * @param string $sHeadingType      'code','full' or 'abbreviated' Optional defaults to 'code'
      * @param string $sResponseType     'short' or 'long' Optional defaults to 'short'
-     * @param array  $aFields           Optional Selected fields
      *
      * @return array|string On success: Requested file as base 64-encoded string. On failure array with error information
      */
-    public function export_responses_by_token ( $iSurveyID, $sDocumentType, $sToken, $sLanguageCode, $sCompletionStatus, $sHeadingType, $sResponseType, array $aFields = [] )
+    public function export_responses_by_token ( $iSurveyID, $sDocumentType, $sToken, $sLanguageCode, $sCompletionStatus, $sHeadingType, $sResponseType)
     {
-        return $this->jsonRPCClient->export_responses_by_token( $this->session_key, $iSurveyID, $sDocumentType, $sToken, $sLanguageCode, $sCompletionStatus, $sHeadingType, $sResponseType, $aFields );
+        return $this->jsonRPCClient->export_responses_by_token( $this->session_key, $iSurveyID, $sDocumentType, $sToken, $sLanguageCode, $sCompletionStatus, $sHeadingType, $sResponseType);
     }
 
     /**
